@@ -1,0 +1,32 @@
+::ng-deep .confirmed {
+    color: #ff073a !important;
+  }
+  
+  ::ng-deep .deceased {
+      color: #6c757d !important;
+    }
+  
+  ::ng-deep .active {
+      color: #007bff !important;
+  }
+  
+  ::ng-deep .recovered {
+      color: #28a745 !important;
+  }
+
+  th {
+      position: sticky;
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+  }
+
+  ::ng-deep .district {
+    color: maroon !important;
+  }
+
+  ::ng-deep tr.highlight:hover {
+    /* background: #f1f1f1 !important; */
+    background: lightblue !important;
+  }
+  

@@ -1,0 +1,62 @@
+<div>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>Add New News</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form [formGroup]="newsForm" (ngSubmit)="addNews()">
+        <table class="example-full-width" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width">
+                <mat-label>Title</mat-label>
+                <input matInput placeholder="Add Your Title Here..." required formControlName="title">
+              </mat-form-field>
+              <app-form-control-error [control]="newsForm.get('title')"></app-form-control-error>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width">
+                <mat-label>Description</mat-label>
+                <textarea matInput placeholder="29 Recoveries..." required formControlName="description"></textarea>
+                <button mat-button *ngIf="newsForm.controls.description.value" matSuffix mat-icon-button aria-label="Clear" (click)="resetControl('description')">
+                  <mat-icon>close</mat-icon>
+                </button>
+              </mat-form-field>
+              <app-form-control-error [control]="newsForm.get('description')"></app-form-control-error>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width">
+                <mat-label>Summary</mat-label>
+                <textarea matInput placeholder="29 Recoveries..." formControlName="summary" required></textarea>
+                <button mat-button *ngIf="newsForm.controls.summary.value" matSuffix mat-icon-button aria-label="Clear" (click)="resetControl('summary')">
+                  <mat-icon>close</mat-icon>
+                </button>
+              </mat-form-field>
+              <app-form-control-error [control]="newsForm.get('summary')"></app-form-control-error>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width">
+                <mat-label>Full News</mat-label>
+                <textarea matInput placeholder="29 Recoveries..." formControlName="fullNews" required></textarea>
+                <button mat-button *ngIf="newsForm.controls.fullNews.value" matSuffix mat-icon-button aria-label="Clear" (click)="resetControl('fullNews')">
+                  <mat-icon>close</mat-icon>
+                </button>
+              </mat-form-field>
+              <app-form-control-error [control]="newsForm.get('fullNews')"></app-form-control-error>
+            </td>
+          </tr>
+        </table>
+        <mat-card-actions>
+          <button type="submit" mat-raised-button color="accent" [disabled]="!newsForm.valid">Add</button>
+          <button type="button" mat-raised-button color="accent" (click)="resetForm()">Reset</button>
+        </mat-card-actions>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

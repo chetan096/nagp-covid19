@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-sm-3 col-md-3 col-lg-3  news-card" *ngFor="let news of latestNews">
+    <p-card header={{news.title}} subheader='{{ news.date | DateTransformer }}' class="card" styleClass="ui-card-shadow">
+      <p-header>
+        <img src="Card" src="assets/images/covid19.jpg">
+      </p-header>
+      <div class="description">{{news.description}}</div>
+      <div class="summary">{{news.summary}}</div>
+      <br/>
+      <button type="button" (click)="openDialogBox(news.id)" pButton icon="pi pi-external-link" label="Check Full News"></button>
+    </p-card>
+  </div>
+</div>
+
+<p-dialog header="Full News" [(visible)]="showFullNews" [style]="{width: '50vw'}" [baseZIndex]="10000">
+    {{currentFullNews}}
+    <br>
+    <br>
+    <p-footer>
+      <button type="button" pButton icon="pi pi-times" (click)="showFullNews=false" label="Close" class="ui-button-secondary"></button>
+    </p-footer>
+  </p-dialog>

@@ -1,0 +1,16 @@
+<app-header [showTab]="true"></app-header>
+<p-card class="card" styleClass="ui-card-shadow">
+  <div class="image">
+    <p-header>
+      <img src="Card" src="assets/images/precaution-icon.gif">
+    </p-header>
+  </div>
+  <div class="description">{{precautionNote}}</div>
+  <br/>
+  <div class="summary">
+    <ul *ngFor="let precaution of precautions">
+      <li>{{precaution}}</li>
+    </ul>
+  </div>
+  <br/>
+</p-card>

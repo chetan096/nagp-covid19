@@ -1,0 +1,84 @@
+.state-list {
+  margin-left: 29%;
+  width: 48%;
+  margin-top: 15px;
+}
+
+.table {
+  align-self: center;
+  border-collapse: separate;
+  border-spacing: 3px 4px;
+  font-family: "archia";
+  position: relative;
+  width: 30rem;
+  border-radius: 5px;
+  padding: .5rem;
+  transition: all .1s ease-in-out;
+  z-index: 99;
+  display: table;
+  top: 4px;
+  border-collapse: separate;
+  font-family: "archia";
+  border-radius: 35px;
+}
+
+.fadeInUp {
+  -webkit-animation-duration: .45s;
+  animation-duration: .45s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+.state-cursor {
+  cursor: pointer;
+}
+
+::ng-deep tr.highlight:hover {
+  /* background: #f1f1f1 !important; */
+  background: lightblue !important;
+}
+
+.icon {
+  color: #6c757d;
+  font-size: .75rem;
+  cursor: pointer;
+}
+
+pi {
+  color: #6c757d;
+  font-size: .75rem;
+  cursor: pointer;
+}
+
+::ng-deep .confirmed {
+  color: #ff073a !important;
+}
+
+::ng-deep .deceased {
+  color: #6c757d !important;
+}
+
+::ng-deep .active {
+  color: #007bff !important;
+}
+
+::ng-deep .recovered {
+  color: #28a745 !important;
+}
+
+::ng-deep .state {
+  color: maroon  !important;
+}
+
+th {
+  position: sticky;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+::ng-deep body .ui-table .ui-table-thead>tr>th {
+  background-color: lightblue !important;
+}

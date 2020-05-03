@@ -1,0 +1,4 @@
+<app-header [showTab]="true"></app-header>
+<button mat-button [routerLink]="['/news/list']" color="primary" routerLinkActive="mat-accent" *ngIf="adminLoggedIn">Views News</button>
+<button mat-button [routerLink]="['/news/add']" color="primary" routerLinkActive="mat-accent" *ngIf="adminLoggedIn">Add News</button>
+<router-outlet></router-outlet>

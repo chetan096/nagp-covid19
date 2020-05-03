@@ -1,0 +1,44 @@
+.example-full-width {
+  width: 100%;
+}
+
+td {
+  padding-right: 8px;
+}
+
+.example-card {
+  width: 50%;
+}
+
+
+mat-card {
+  max-width: 60%;
+  margin: 2em auto;
+}
+
+.mat-card-header-text {
+  margin: 0px;
+}
+
+mat-card-header {
+  padding: 0;
+  border-bottom: 3px solid #ff4081;
+}
+
+mat-card-title {
+  display: block;
+  margin-bottom: 0;
+}
+
+.field {
+  top: 5px;
+}
+
+mat-form-field {
+    top: 8px;
+}
+
+textarea.mat-input-element {
+    padding: 0 0;
+    margin: -2px 0;
+}

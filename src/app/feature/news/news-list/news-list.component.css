@@ -1,0 +1,16 @@
+.news-card {
+  margin-left: 6%;
+  margin-top: 2%;
+}
+
+.description {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #005b9f;
+  font-weight: bold;
+}
+
+.summary {
+  font-size: 10px;
+  margin-top: 1px;
+}

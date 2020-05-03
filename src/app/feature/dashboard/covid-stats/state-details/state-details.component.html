@@ -1,0 +1,21 @@
+<p-table [value]="selectedStateDistrictStats">
+  <ng-template pTemplate="header">
+    <tr class="state-data">
+      <th *ngFor="let col of cols" [ngClass]="{'confirmed':col.header==='Confirmed',
+        'deceased':col.header==='Deceased',
+        'active':col.header==='Active',
+        'recovered':col.header==='Recovered',
+        'district':col.header==='District'
+      }">
+        {{col.header}}
+      </th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-district>
+    <tr class="highlight">
+      <td *ngFor="let col of cols" class="state-cursor" class="state-data">
+        <span>{{district[col.field]}}</span>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>

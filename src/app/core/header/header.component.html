@@ -1,0 +1,35 @@
+<div class="row">
+  <mat-toolbar class="header">
+    <mat-toolbar-row>
+      <div class="title col-sm-4 col-md-4 col-lg-4">
+        <h1>{{appHeader}}</h1>
+      </div>
+      <div class="tab col-sm-5 col-md-4 col-lg-5">
+        <nav mat-tab-nav-bar *ngIf="showTab">
+          <a mat-tab-link *ngFor="let link of tabs" (click)="navigateToDifferentModule(link)" [active]="activeTab == link">
+            {{link | tabDisplay}}
+          </a>
+        </nav>
+      </div>
+      <div class="account col-sm-3 col-md-4 col-lg-3" *ngIf="userLoggedIn; else userLoggedOut">
+        <button mat-button [matMenuTriggerFor]="belowMenu" color="accent">
+          <mat-icon>account_circle</mat-icon> {{currentLoggedInUser}}
+        </button>
+        <mat-menu #belowMenu="matMenu" yPosition="below">
+          <button mat-menu-item (click)="logoutUser()">Logout</button>
+        </mat-menu>
+      </div>
+
+      <ng-template #userLoggedOut>
+        <div class="account col-sm-3 col-md-4 col-lg-3">
+          <button mat-button color="accent" [routerLink]="['/dashboard']" *ngIf="showDashboardButton">
+            Dashboard
+          </button>
+          <button mat-button color="accent" [routerLink]="['/login/admin']" *ngIf="showSignInButton">
+            <i class="pi pi-sign-in"></i>Admin
+          </button>
+        </div>
+      </ng-template>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
