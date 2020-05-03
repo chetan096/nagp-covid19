@@ -71,7 +71,7 @@ Working:
 Assumptions:
 
   1.Only one admin is there for managing the application.
-  2. In memory web api will not store added news.
+  2. In memory web api will not store added news on refresh.
 
   
 Admin login creds:
